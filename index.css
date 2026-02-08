@@ -1,0 +1,19 @@
+:root {
+    --bg: #FFFFFF;
+    --text: #000000;
+    --text-muted: #3F3F3F;
+    --highlight: #0BA9ED;
+    --border: #297999;
+    --border-muted: #1B5066;
+    --primary: #40BAF2;
+    --secondary: #F27840;
+    --danger: #FF3247;
+    --warning: #ffc107;
+    --success: #81FF5E;
+    --info: #82A6DA;
+}
+
+/* TODO: Make it lol */
+[data-theme="dark"] {
+
+}
