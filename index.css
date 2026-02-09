@@ -131,6 +131,7 @@ main {
 #main-content-1-left p{
     color: var(--text-muted);
     font-size: 1.35rem;
+    max-width: 40ch;
 }
 
 #main-content-1-left button {
