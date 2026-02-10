@@ -29,6 +29,19 @@
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* Helper classes */
+.disabled {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: var(--bg);
@@ -37,17 +50,12 @@ body {
     margin: 0;
     user-select: none;
     overflow-x: hidden;
+    scrollbar-gutter: stable;
 }
-
-.disabled {
-    display: none;
-}
-
 
 header {
     position: sticky;
     height: var(--header-height);
-    background: red;
     z-index: 100;
 }
 
@@ -228,4 +236,10 @@ main {
 #main-content-2-top h1 {
     font-size: 3rem;
     max-width: 30ch;
+}
+
+#main-content-2-card {
+    width: 50px;
+    height: 50px;
+    background: red;
 }

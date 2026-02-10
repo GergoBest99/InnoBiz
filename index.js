@@ -7,11 +7,13 @@ function setupMenuToggle() {
     const navbar = document.getElementById('navbar');
 
     toggleBtn.addEventListener('click', () => {
-        navbar.classList.toggle('hidden');
+        const isHidden = navbar.classList.toggle('hidden');
 
-        if (navbar.classList.contains('hidden')) {
+        if (isHidden) {
+            document.body.classList.remove('no-scroll');
             toggleBtn.textContent = 'Open Menu';
         } else {
+            document.body.classList.add('no-scroll');
             toggleBtn.textContent = 'Close Menu';
         }
     });
