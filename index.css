@@ -268,18 +268,21 @@ main {
     max-width: 30ch;
 }
 
-#main-content-2-cards {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    max-width: 25rem;
-    margin-top: 2rem;
-}
 
 #main-content-3 {
     max-width: 800px; 
     margin: 0 auto;    
     padding: 0 20px;   
+}
+
+
+.card-slider-container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 25rem;
+    margin: 2rem auto;
+    position: relative;
 }
 
 .card {
@@ -302,6 +305,10 @@ main {
     transform: translateY(0);
 }
 
+.card-slider-container > .card {
+    grid-area: 1 / 1;
+}
+
 .card-icon {
     width: var(--card-icon-size);
     height: var(--card-icon-size);
@@ -312,10 +319,6 @@ main {
     justify-content: center;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-}
-
-.card p {
-    font-size: 1.35rem;
 }
 
 .card p {
@@ -338,4 +341,8 @@ main {
     color: var(--primary);
     font-weight: bold;
     font-size: 1.1em;
+}
+
+#main-content-3-cards p {
+    font-style: italic;
 }

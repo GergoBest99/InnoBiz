@@ -28,7 +28,7 @@ function setupMenuToggle() {
 }
 
 function setupCardSlider() {
-    const containers = document.querySelectorAll('#main-content-2-cards, #main-content-3-cards');
+    const containers = document.querySelectorAll('.card-slider-container');
 
     containers.forEach(container => {
         const cards = container.querySelectorAll('.card');
