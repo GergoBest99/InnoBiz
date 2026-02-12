@@ -10,7 +10,7 @@ function setupMenuToggle() {
 
     const toggleMenu = () => {
         const isHidden = navbar.classList.toggle('hidden');
-        overlay.classList.toggle('hidden'); // Show/Hide the grey background
+        overlay.classList.toggle('hidden');
 
         if (isHidden) {
             document.body.classList.remove('no-scroll');
@@ -28,14 +28,18 @@ function setupMenuToggle() {
 }
 
 function setupCardSlider() {
-    const cards = document.querySelectorAll('.card');
-    let currentIndex = 0;
+    const containers = document.querySelectorAll('#main-content-2-cards, #main-content-3-cards');
 
-    if (cards.length === 0) return;
+    containers.forEach(container => {
+        const cards = container.querySelectorAll('.card');
+        let currentIndex = 0;
 
-    setInterval(() => {
-        cards[currentIndex].classList.remove('active');
-        currentIndex = ++currentIndex % cards.length;
-        cards[currentIndex].classList.add('active');
-    }, 4000);
+        if (cards.length <= 1) return;
+
+        setInterval(() => {
+            cards[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % cards.length;
+            cards[currentIndex].classList.add('active');
+        }, 4000);
+    });
 }
