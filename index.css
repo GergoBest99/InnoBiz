@@ -23,6 +23,7 @@
     /* Constants */
     --header-height: 3rem;
     --card-icon-size: 60px;
+    --footer-link-box-size: 50px;
 }
 
 /* TODO: Make it lol */
@@ -358,4 +359,81 @@ main {
 
 #main-content-3-cards p {
     font-style: italic;
+}
+
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100dvh - var(--header-height));
+    background: var(--bg); /* TODO: Needs a muted-bg color */
+}
+
+#footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-top img {
+    margin-right: 1rem;
+}
+
+#footer-gap {
+    position: relative;
+    height: 8rem;
+}
+
+#footer p {
+    text-align: center;
+    max-width: 35ch;
+}
+
+
+#footer-content-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-muted);
+}
+
+#footer-content-1 h2 {
+    font-variant: small-caps;
+}
+
+#footer-content-1 ul {
+    position: relative;
+    top: -1.5rem;
+    list-style: none;
+}
+
+#footer-content-1 ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text);
+    line-height: 1.75em;
+    left: -1em;
+    font-size: 1.15rem;
+}
+
+
+#footer-content-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+}
+
+#footer-content-2 h2 {
+    font-variant: small-caps;
+}
+
+#footer-content-2 img {
+    border: 1px solid black;
+    border-radius: 0.25em;
+    height: var(--footer-link-box-size);
+    width: var(--footer-link-box-size);
 }
