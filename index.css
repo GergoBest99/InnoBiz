@@ -20,6 +20,11 @@
     --primary-hover: #3EA7E8;
     --button-shadow-hover: #3EA7E899; /* #60% transparency */
 
+    /* Card Colors */
+    --card-icon-bg: #f0f7ff;
+    --card-tag-bg: #f0f2f5;
+    --card-category-bg: rgba(64, 186, 242, 0.1);
+
     /* Constants */
     --header-height: 3rem;
     --card-icon-size: 45px;
@@ -333,7 +338,7 @@ main {
 .card-icon {
     width: var(--card-icon-size);
     height: var(--card-icon-size);
-    background: #f0f7ff;
+    background: var(--card-icon-bg);
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -348,7 +353,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--primary);
-    background: rgba(64, 186, 242, 0.1);
+    background: var(--card-category-bg);
     padding: 0.3rem 0.7rem;
     border-radius: 5px;
 }
@@ -371,7 +376,7 @@ main {
 }
 
 .card-tags li {
-    background: #f0f2f5;
+    background: var(--card-tag-bg);
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.25rem 0.6rem;
