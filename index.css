@@ -314,13 +314,14 @@ main {
             0 15px 50px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.03);
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.75s ease, transform 0.75s ease;
+    transform: translateY(10px) scale(0.9);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 .card-category-wrapper {
