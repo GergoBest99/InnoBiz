@@ -67,7 +67,7 @@ function renderServiceCards() {
             </div>
             <h2>${service.name}</h2>
             <p>${service.description}</p>
-            <ul class="sub-service-tags">
+            <ul class="card-tags">
                 ${tagsHTML}
             </ul>
         `;
