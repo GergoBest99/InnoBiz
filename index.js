@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     setupMenuToggle();
+    renderServiceCards();
     setupCardSlider();
 });
 
@@ -40,6 +41,50 @@ function setupCardSlider() {
             cards[currentIndex].classList.remove('active');
             currentIndex = (currentIndex + 1) % cards.length;
             cards[currentIndex].classList.add('active');
-        }, 4000);
+        }, 5000);
     });
+}
+
+function renderServiceCards() {
+    const container = document.getElementById('main-content-2-cards');
+    if (!container || !servicesData) return;
+
+    const randomizedData = shuffleArray([...servicesData]);
+
+    // clear any placeholders
+    container.innerHTML = '';
+
+    randomizedData.forEach((service, index) => {
+        const card = document.createElement('div');
+        card.className = `card ${index === 0 ? 'active' : ''}`;
+
+        const tagsHTML = service.tags.map(tag => `<li>${tag}</li>`).join('');
+
+        card.innerHTML = `
+            <div class="card-category-wrapper">
+                <div class="card-icon">${service.icon}</div>
+                <span class="card-category">${service.category}</span>
+            </div>
+            <h2>${service.name}</h2>
+            <p>${service.description}</p>
+            <ul class="sub-service-tags">
+                ${tagsHTML}
+            </ul>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+function shuffleArray(array) {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
 }
