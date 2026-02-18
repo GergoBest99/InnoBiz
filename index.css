@@ -3,7 +3,7 @@
 :root {
     /* Colors */
     --bg: #FFFFFF;
-    --bg-muted: #F0F0F0;
+    --bg-muted: #F8FAFC;
     --text: #000000;
     --text-muted: #505050;
     --highlight: #0B86EA;
@@ -510,7 +510,7 @@ main {
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 0.5em;
-    background-color: var(--bg);
+    background-color: var(--bg-muted);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
                 0 1px 4px rgba(0, 0, 0, 0.04);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
