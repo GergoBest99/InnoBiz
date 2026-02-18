@@ -15,10 +15,8 @@ function setupMenuToggle() {
 
         if (isHidden) {
             document.body.classList.remove('no-scroll');
-            toggleBtn.textContent = 'Open Menu';
         } else {
             document.body.classList.add('no-scroll');
-            toggleBtn.textContent = 'Close Menu';
         }
     };
 

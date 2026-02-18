@@ -96,6 +96,16 @@ header {
     position: fixed;
     z-index: 1001;
     top: 0;
+    background-image: url("source/pngs/menu_toggle_button_black.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 21px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 #navbar {
