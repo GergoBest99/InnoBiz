@@ -503,8 +503,21 @@ main {
 }
 
 #footer-content-2 img {
-    border: 1px solid black;
-    border-radius: 0.25em;
     height: var(--footer-link-box-size);
     width: var(--footer-link-box-size);
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.5em;
+    background-color: var(--bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#footer-content-2 img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary);
 }
