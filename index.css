@@ -97,8 +97,8 @@ header {
 #navbar-toggle {
     position: fixed;
     z-index: 1001;
-    top: 4px;
-    left: 4px;
+    top: 8px;
+    left: 8px;
     background-image: url("source/pngs/menu_toggle_button_black.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -122,7 +122,7 @@ header {
             5px 0 15px rgba(0, 0, 0, 0.05),
             15px 0 50px rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.02);
-    padding-top: calc(var(--navbar-toggle-button-size) + 0.15rem);
+    padding-top: calc(var(--navbar-toggle-button-size) + 1rem);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     font-size: 1.35rem;
