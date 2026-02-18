@@ -29,6 +29,7 @@
     --header-height: 3rem;
     --card-icon-size: 45px;
     --footer-link-box-size: 50px;
+    --navbar-toggle-button-size: 48px;
 }
 
 /* TODO: Make it lol */
@@ -104,8 +105,8 @@ header {
     background-color: white;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    width: 48px;
-    height: 48px;
+    width: var(--navbar-toggle-button-size);
+    height: var(--navbar-toggle-button-size);
     padding: 0;
     border: none;
     cursor: pointer;
@@ -120,7 +121,7 @@ header {
             5px 0 15px rgba(0, 0, 0, 0.05),
             15px 0 50px rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.02);
-    padding-top: 1em;
+    padding-top: calc(var(--navbar-toggle-button-size) + 0.15rem);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     font-size: 1.35rem;
@@ -136,6 +137,11 @@ header {
     justify-content: center;
     gap: 1em;
     padding: 0 1em;
+}
+
+#navbar-top img {
+    width: 56px;
+    height: 56px;
 }
 
 #navbar-content {
@@ -442,6 +448,8 @@ main {
 
 #footer-top img {
     margin-right: 1rem;
+    width: 72px;
+    height: 72px;
 }
 
 #footer-gap {
