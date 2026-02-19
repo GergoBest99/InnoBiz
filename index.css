@@ -27,7 +27,7 @@
     --card-category-bg: rgba(64, 186, 242, 0.1);
 
     /* Constants */
-    --header-height: 3rem;
+    --navbar-height: 6rem;
     --card-icon-size: 45px;
     --footer-link-box-size: 50px;
     --navbar-toggle-button-size: 48px;
@@ -63,13 +63,6 @@ body {
     user-select: none;
     overflow-x: hidden;
     scrollbar-gutter: stable;
-}
-
-
-header {
-    position: sticky;
-    height: var(--header-height);
-    z-index: 100;
 }
 
 
@@ -185,7 +178,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: calc(100dvh - var(--header-height));
+    height: 100dvh;
 }
 
 #main-content-1-left h1 {
@@ -229,7 +222,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100dvh - var(--header-height));
+    height: 100dvh;
 }
 
 #main-content-2-top-top {
@@ -301,7 +294,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100dvh - var(--header-height));
+    height: 100dvh;
 }
 
 #main-content-3-top-top{
@@ -522,4 +515,46 @@ main {
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
     border-color: var(--primary);
+}
+
+@media (min-width: 650px) {
+    #navbar-toggle,
+    #navbar-overlay {
+        display: none;
+    }
+    
+    #navbar {
+        position: sticky;
+        height: var(--navbar-height);
+        width: 100%;
+        transform: translateX(0) !important;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 5%; 
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    #navbar-content ul {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    #navbar-content ul li a {
+        left: 0; /* It gets shifted to the left if this is not here */
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    #navbar-content ul li a:hover {
+        color: var(--primary);
+    }
+
+    #main-content-1-left,
+    #main-content-2,
+    #main-content-3 {
+        height: calc(100dvh - var(--navbar-height));
+    }
 }
