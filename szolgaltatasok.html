@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munka Kategóriák - Keresés</title>
+    <link rel="stylesheet" href="szolgaltatasok.css">
+</head>
+<body>
+    <div id="navbar-overlay" class="hidden"></div>
+
+    <div id="container">
+        <button id="navbar-toggle"></button>
+
+        <nav id="navbar" class="hidden">
+            <a href="index.html" id="navbar-top">
+                <img src="source/jpgs/logo_no_text.jpg" alt="Logo">
+                <h3>InnoBiz</h3>
+            </a>
+            <div id="navbar-content">
+                <ul>
+                    <li><a href="index.html#main-content-3">Referenciák</a></li>
+                    <li><a href="rolunk.html">Rólunk</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <header class="header">
+                    <h1 class="title">Találja meg a tökéletes szakembert minden feladathoz!</h1>
+                    <p class="subtitle">Válogasson professzionális szolgáltatásaink közül, vagy keressen rá konkrét munkafolyamatra az azonnali megoldásért</p>
+                </header>
+
+                <div class="search-bar">
+                    <nav id="navigation" class="navigation"></nav>
+                    
+                    <div class="search-wrapper">
+                        <input type="text" id="search-input" placeholder="Milyen munkában segíthetünk? (pl. villanyszerelés, festés...)" class="input-field">
+                        <span class="icon">
+                            <img src="source/pngs/search.png" alt="Search" width="20" height="20">
+                        </span>
+                    </div>
+                </div>
+
+                <div id="grid" class="grid"></div>
+
+                <div id="empty" class="empty">
+                    <div class="empty-icon">
+                        <img src="source/pngs/search.png" alt="No results" width="80" height="80">
+                    </div>
+                    <h3 class="empty-title">Nincs találat</h3>
+                    <p class="empty-text">Próbálja meg más szavakkal vagy válasszon a kategóriák közül.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div id="footer-top">
+                <img src="source/jpgs/logo_no_text.jpg" alt="Logo">
+                <h1>InnoBiz</h1>
+            </div>
+            <p>
+                Ahol az innováció és a szaktudás találkozik. Minőségi kivitelezés minden szinten.
+            </p>
+
+            <div id="footer-content-1">
+                <h2>cégünk</h2>
+                <ul>
+                    <li><a href="#">Rólunk</a></li>
+                    <li><a href="#">Karrier</a></li>
+                </ul>
+            </div>
+
+            <div id="footer-content-2">
+                <h2>kövessen minket</h2>
+                <div id="footer-content-2-links">
+                    <img src="source/svgs/tiktok_logo.svg" alt="TikTok">
+                    <img src="source/svgs/instagram_logo.svg" alt="Instagram">
+                    <img src="source/pngs/email_icon.png" alt="Email">
+                    <img src="source/svgs/phone_icon.svg" alt="Telefon">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="szolgaltatasok.js"></script>
+</body>
+</html>

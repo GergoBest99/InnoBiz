@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMenuToggle();
     renderServiceCards();
     setupCardSlider();
+    setupImageSlider();
 });
 
 function setupMenuToggle() {
@@ -86,3 +87,31 @@ function shuffleArray(array) {
 
     return array;
 }
+
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[n].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function setupImageSlider() {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    setInterval(() => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 4000);
+}
+
+// 4 másodpercenként váltás
+setInterval(nextSlide, 4000);
