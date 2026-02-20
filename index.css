@@ -36,9 +36,34 @@
 
 /* TODO: Make it lol */
 [data-theme="dark"] {
+    /* Colors */
+    --bg: #141414;
+    --bg-muted: #1F1F1F;
+    --text: #EEEEEE;
+    --text-muted: #A0A0A0;
 
+    --highlight: #40BAF2;
+    --border: #333333;
+    --border-muted: #262626;
+
+    --primary: #40BAF2;
+    --secondary: #F27840;
+    --danger: #FF4D5E;
+    --warning: #FFC107;
+    --success: #81FF5E;
+    --info: #82A6DA;
+
+    --button-shadow: rgba(0, 0, 0, 0.6);
+
+    /* Hover Colors */
+    --primary-hover: #58C5F4;
+    --button-shadow-hover: rgba(64, 186, 242, 0.2);
+
+    /* Card Colors */
+    --card-icon-bg: #252525;
+    --card-tag-bg: #2A2A2A;
+    --card-category-bg: rgba(64, 186, 242, 0.15);
 }
-
 
 * {
     box-sizing: border-box;

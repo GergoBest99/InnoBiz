@@ -1,9 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    setupTheme();
     setupMenuToggle();
     renderServiceCards();
     setupCardSlider();
     setupImageSlider();
 });
+
+function setupTheme() {
+    const themeBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    }
+
+    themeBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        
+        localStorage.setItem('theme', newTheme);
+        
+        themeBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
+}
 
 function setupMenuToggle() {
     const toggleBtn = document.getElementById('navbar-toggle');
