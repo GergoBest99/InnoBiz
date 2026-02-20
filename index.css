@@ -31,6 +31,7 @@
     --card-icon-size: 45px;
     --footer-link-box-size: 50px;
     --navbar-toggle-button-size: 48px;
+    --min-content-height: 800px;
 }
 
 /* TODO: Make it lol */
@@ -177,6 +178,7 @@ main {
     justify-content: center;
     gap: 4rem;
     width: 100%;
+    height: max(100dvh, var(--min-content-height));
 }
 
 #main-content-1-left {
@@ -184,7 +186,6 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 100dvh;
 }
 
 #main-content-1-right {
@@ -192,7 +193,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
 }
 
 #main-content-1-left h1 {
@@ -236,7 +236,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    height: max(100dvh, var(--min-content-height));
 }
 
 #main-content-2-top-top {
@@ -308,7 +308,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    height: max(100dvh, var(--min-content-height));
 }
 
 #main-content-3-top-top{
@@ -633,7 +633,7 @@ main {
     #main-content-1-right,
     #main-content-2,
     #main-content-3 {
-        height: calc(100dvh - var(--navbar-height));
+        height: max(var(--min-content-height), calc(100dvh - var(--navbar-height)));
     }
 }
 
