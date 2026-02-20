@@ -675,24 +675,3 @@ main {
         display: none;
     }
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .slider-container {
-        max-width: 90vw;
-    }
-
-    .slider-panel {
-        border-radius: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .slider-panel {
-        border-radius: 12px;
-    }
-}
