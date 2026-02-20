@@ -606,4 +606,8 @@ main {
         text-align: center;
         width: 100%;
     }
+
+    .card-slider-container.wide-card {
+        max-width: 45rem;
+    }
 }
