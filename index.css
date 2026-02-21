@@ -678,7 +678,7 @@ main {
 }
 
 
-@media (min-width: 650px) {
+@media (min-width: 850px) {
     #navbar-toggle,
     #navbar-overlay {
         display: none;
