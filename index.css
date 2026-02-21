@@ -16,6 +16,8 @@
     --success: #81FF5E;
     --info: #82A6DA;
     --button-shadow: #3EA7E866; /* #40% transparency */
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 
     /* Hover Colors */
     --primary-hover: #3EA7E8;
@@ -38,22 +40,19 @@
 /* TODO: Make it lol */
 [data-theme="dark"] {
     /* Colors */
-    --bg: #141414;
-    --bg-muted: #1F1F1F;
+    --bg: #0F1113;
+    --bg-muted: #1A1D21;
     --text: #EEEEEE;
-    --text-muted: #A0A0A0;
-
+    --text-muted: #9BA3AF;
     --highlight: #40BAF2;
-    --border: #333333;
-    --border-muted: #262626;
-
+    --border: #2D333B;
+    --border-muted: #1F242B;
     --primary: #40BAF2;
     --secondary: #F27840;
     --danger: #FF4D5E;
     --warning: #FFC107;
     --success: #81FF5E;
     --info: #82A6DA;
-
     --button-shadow: rgba(0, 0, 0, 0.6);
 
     /* Hover Colors */
@@ -61,25 +60,24 @@
     --button-shadow-hover: rgba(64, 186, 242, 0.2);
 
     /* Card Colors */
-    --card-icon-bg: #252525;
-    --card-tag-bg: #2A2A2A;
-    --card-category-bg: rgba(64, 186, 242, 0.15);
+    --card-bg: #1C2128;
+    --card-icon-bg: #2D333B;
+    --card-tag-bg: #2D333B;
+    --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    --nav-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
 
     #navbar-toggle {
         background-image: url("source/pngs/menu_toggle_button_white.png");
+        background-color: var(--card-bg);
     }
 
     #footer-content-2-links a {
-        background-color: var(--bg-muted);
+        background-color: var(--card-bg);
         border-color: var(--border);
     }
 
     .footer-icon {
         fill: var(--text);
-    }
-
-    #footer-content-2-links a:hover .footer-icon {
-        fill: var(--highlight);
     }
 }
 
@@ -411,13 +409,10 @@ main {
 .card {
     grid-area: 1 / 1;
     width: 100%;
-    background: var(--bg);
+    background: var(--card-bg, var(--bg));
     border-radius: 2em;
     padding: 3em 2em;
-    box-shadow:
-            0 2px 10px rgba(0, 0, 0, 0.1),
-            0 15px 50px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: var(--card-shadow);
     opacity: 0;
     transform: translateY(10px) scale(0.9);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -626,10 +621,10 @@ main {
 .slider-panel {
     width: 100%;
     aspect-ratio: 3 / 4;
-    background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    background: var(--card-bg, #ffffff);
+    box-shadow: var(--card-shadow);
 }
 
 .slider-wrapper {
@@ -675,7 +670,9 @@ main {
         padding: 0.5rem 5%; 
         border-right: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        box-shadow: var(--nav-shadow);
+        background: var(--bg);
+        border-bottom: 1px solid var(--border-muted);
     }
     
     #navbar-content ul {
