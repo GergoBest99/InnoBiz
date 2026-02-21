@@ -725,12 +725,6 @@ body {
     border-radius: 8px;
 }
 
-
-#password1:focus:invalid:not(:placeholder-shown) ~ .password-hint {
-    display: block;
-}
-
-
-#password1:invalid:not(:placeholder-shown) ~ .password-hint {
-    display: block;
+.password-hint.visible {
+    display: block !important;
 }
