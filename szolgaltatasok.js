@@ -229,7 +229,7 @@ function update() {
 
 function createCard(item) {
     const div = document.createElement('div');
-    div.className = 'card';
+    div.className = 'service-card'; // Changed from 'card' to 'service-card'
     const hasSub = item.sub && item.sub.length > 0;
     const fallbackImage = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23e2e8f0" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" font-family="Arial, sans-serif" font-size="20" fill="%2394a3b8" text-anchor="middle" dominant-baseline="middle"%3EKép nem elérhető%3C/text%3E%3C/svg%3E';
     div.innerHTML = `
