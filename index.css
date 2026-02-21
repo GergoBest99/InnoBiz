@@ -18,10 +18,12 @@
     --button-shadow: #3EA7E866; /* #40% transparency */
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --scrollbar-thumb: #949494;
 
     /* Hover Colors */
     --primary-hover: #3EA7E8;
     --button-shadow-hover: #3EA7E899; /* #60% transparency */
+    --scrollbar-thumb-hover: #6B6B6B;
 
     /* Card Colors */
     --card-icon-bg: #f0f7ff;
@@ -35,6 +37,7 @@
     --navbar-toggle-button-size: 48px;
     --theme-toggle-button-size: 48px;
     --min-content-height: 800px;
+    --scrollbar-border-radius: 16px;
 }
 
 /* TODO: Make it lol */
@@ -54,17 +57,19 @@
     --success: #81FF5E;
     --info: #82A6DA;
     --button-shadow: rgba(0, 0, 0, 0.6);
+    --nav-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    --scrollbar-thumb: #4B5563;
 
     /* Hover Colors */
     --primary-hover: #58C5F4;
     --button-shadow-hover: rgba(64, 186, 242, 0.2);
+    --scrollbar-thumb-hover: #9CA3AF;
 
     /* Card Colors */
     --card-bg: #1C2128;
     --card-icon-bg: #2D333B;
     --card-tag-bg: #2D333B;
     --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
-    --nav-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
 
     #navbar-toggle {
         background-image: url("source/pngs/menu_toggle_button_white.png");
@@ -106,6 +111,26 @@ body {
     user-select: none;
     overflow-x: hidden;
     scrollbar-gutter: stable;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: var(--scrollbar-border-radius);
+    border: 3px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+    border-width: 2px;
 }
 
 
