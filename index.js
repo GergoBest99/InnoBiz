@@ -1,3 +1,11 @@
+// Immediate theme application to prevent flash
+(function() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     setupTheme();
     setupMenuToggle();
@@ -11,7 +19,7 @@ function setupTheme() {
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
+        // Ensure the button icon matches the theme
         themeBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
     }
 

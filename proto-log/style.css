@@ -22,9 +22,33 @@
     /* Constants */
     --header-height: 3rem;
     --card-icon-size: 60px;
+    --theme-toggle-button-size: 48px;
 }
 
+[data-theme="dark"] {
+    /* Colors */
+    --bg: #0F1113;
+    --bg-muted: #1A1D21;
+    --text: #EEEEEE;
+    --text-muted: #9BA3AF;
+    --highlight: #40BAF2;
+    --border: #2D333B;
+    --border-muted: #1F242B;
+    --primary: #40BAF2;
+    --secondary: #F27840;
+    --danger: #FF4D5E;
+    --warning: #FFC107;
+    --success: #81FF5E;
+    --info: #82A6DA;
+    --button-shadow: rgba(0, 0, 0, 0.6);
+    --nav-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    --scrollbar-thumb: #4B5563;
 
+    /* Hover Colors */
+    --primary-hover: #58C5F4;
+    --button-shadow-hover: rgba(64, 186, 242, 0.2);
+    --scrollbar-thumb-hover: #9CA3AF;
+}
 
 
 * {
@@ -42,6 +66,11 @@ body {
     justify-content: center;
     padding: 20px;
     line-height: 1.6;
+    color: var(--text);
+}
+
+[data-theme="dark"] body {
+    background: linear-gradient(135deg, #053f6e 0%, #1e5c1e 100%);
 }
 
 .login-container {
@@ -66,13 +95,19 @@ body {
     border: 1px solid var(--info);
     border-radius: 12px;
     padding: 16px 16px 8px 16px;
-    color: black;
+    color: var(--text);
     font-size: 16px;
     font-weight: 400;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     outline: none;
     backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .input-wrapper input {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: var(--border);
+    color: var(--text);
 }
 
 .input-wrapper input::placeholder {
@@ -95,6 +130,10 @@ body {
     border-color: #06b6d4;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 25px rgba(6, 182, 212, 0.2);
+}
+
+[data-theme="dark"] .input-wrapper input:focus {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .input-wrapper input:focus + label,
@@ -263,6 +302,11 @@ body {
     backdrop-filter: blur(10px);
 }
 
+[data-theme="dark"] .checkmark {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: var(--border);
+}
+
 .remember-wrapper input[type="checkbox"]:checked ~ .checkbox-label .checkmark {
     background: #06b6d4;
     border-color: #06b6d4;
@@ -353,6 +397,11 @@ body {
     overflow: hidden;
 }
 
+[data-theme="dark"] .login-card {
+    background: var(--bg-muted);
+    border-color: var(--border);
+}
+
 .login-card:hover::before {
     left: 100%;
 }
@@ -372,6 +421,13 @@ body {
     font-weight: 700;
     margin-bottom: 8px;
     background: linear-gradient(135deg, var(--border) 0%, var(--border-muted) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .login-header h2 {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--info) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -401,8 +457,16 @@ body {
     z-index: 2;
 }
 
+[data-theme="dark"] .password-toggle {
+    color: var(--text-muted);
+}
+
 .password-toggle:hover {
     color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .password-toggle:hover {
+    color: var(--text);
 }
 
 .eye-icon {
@@ -482,6 +546,11 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
+[data-theme="dark"] .divider::before,
+[data-theme="dark"] .divider::after {
+    background: var(--border);
+}
+
 .divider::before {
     margin-right: 16px;
 }
@@ -525,10 +594,19 @@ body {
     border: 1px solid var(--info);
 }
 
+[data-theme="dark"] .social-btn {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: var(--border);
+}
+
 .social-btn:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .social-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .social-icon {
@@ -566,6 +644,39 @@ body {
 
 .signup-link a:hover {
     color: var(--text-muted);
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1003;
+    width: var(--theme-toggle-button-size);
+    height: var(--theme-toggle-button-size);
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+}
+
+[data-theme="dark"] #theme-toggle {
+    background: var(--bg-muted);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+#theme-toggle:active {
+    transform: scale(0.9);
 }
 
 /* Mobile Responsive */
