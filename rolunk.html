@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rólunk - InnoBiz</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="rolunk.css">
     <script>
         (function() {
             const savedTheme = localStorage.getItem('theme');
@@ -57,7 +58,7 @@
                     <h1>Szakembereknek lehetőség, otthonoknak megoldás!</h1>
                 </div>
 
-                <div class="card-slider-container wide-card" style="margin-bottom: 1rem;">
+                <div class="card-slider-container wide-card slider-problem">
                     <div class="card active">
                         <div class="card-icon">🔍</div>
                         <h2>A probléma</h2>
@@ -68,7 +69,7 @@
                     </div>
                 </div>
 
-                <div class="card-slider-container wide-card" style="margin-top: 1rem;">
+                <div class="card-slider-container wide-card slider-solution">
                     <div class="card active">
                         <div class="card-icon">🤝</div>
                         <h2>A megoldásunk</h2>
@@ -81,17 +82,17 @@
             </div>
 
             <div id="main-content-2">
-                <div id="main-content-2-top" style="text-align: center;">
+                <div id="main-content-2-top">
                     <h2 id="main-content-2-top-top">kapcsolat</h2>
                     <h1>Maradjunk kapcsolatban!</h1>
-                    <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 1rem auto;">
+                    <p class="contact-description">
                         Csatlakozzon hozzánk, iratkozzon fel hírlevelünkre és kövesse közösségi média oldalainkat,
                         hogy ne maradjon le legújabb híreinkről és akcióinkról.
                     </p>
 
-                    <div style="background: var(--bg-muted); padding: 2rem; border-radius: 2em; border: 1px solid rgba(0,0,0,0.05); margin-top: 2rem;">
-                        <p style="font-weight: bold; margin: 0.5rem 0;">📧 <a href="mailto:innobiz.szakiplaza@gmail.com" style="color: var(--highlight); text-decoration: none;">innobiz.szakiplaza@gmail.com</a></p>
-                        <p style="font-weight: bold; margin: 0.5rem 0;">📞 <a href="tel:+36301234567" style="color: var(--highlight); text-decoration: none;">+36 30 123 4567</a></p>
+                    <div class="contact-box">
+                        <p class="contact-item">📧 <a href="mailto:innobiz.szakiplaza@gmail.com" class="contact-link">innobiz.szakiplaza@gmail.com</a></p>
+                        <p class="contact-item">📞 <a href="tel:+36301234567" class="contact-link">+36 30 123 4567</a></p>
                     </div>
                 </div>
             </div>
