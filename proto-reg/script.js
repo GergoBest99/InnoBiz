@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function setupTheme() {
     const themeBtn = document.getElementById('theme-toggle');
+    if (!themeBtn) return;
+
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme) {

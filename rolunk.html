@@ -5,113 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rólunk - InnoBiz</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+    </script>
     <script src="index.js"></script>
 </head>
 <body>
-<div id="navbar-overlay" class="hidden"></div>
+    <div id="navbar-overlay" class="hidden"></div>
 
-<div id="container">
-    <button id="navbar-toggle"></button>
+    <div id="container">
+        <button id="navbar-toggle"></button>
 
-    <nav id="navbar" class="hidden">
-        <a href="index.html" id="navbar-top">
-            <img src="source/jpgs/logo_no_text.jpg" alt="Logo">
-            <h3>InnoBiz</h3>
-        </a>
-        <div id="navbar-content">
-            <ul>
-                <li><a href="index.html">Szolgáltatások</a></li>
-                <li><a href="index.html#main-content-3">Referenciák</a></li>
-                <li><a href="rolunk.html">Rólunk</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <div id="main-content-1">
-            <div id="main-content-1-left">
-                <h2 id="main-content-2-top-top">ismerjen meg minket</h2>
-                <h1>Mi vagyunk az<br>InnoBiz csapata.</h1>
-                <p>
-                    Egy olyan innovatív vállalkozás, amely az Ön segítségére lehet!
-                    Hiszünk abban, hogy a technológia és a szaktudás összekapcsolása értéket teremt.
-                </p>
+        <nav id="navbar" class="hidden">
+            <a href="index.html" id="navbar-top">
+                <img src="source/pngs/InnoBiz_PNG_CLEAN_LOGO.png" alt="Logo">
+                <h3>InnoBiz</h3>
+            </a>
+            <div id="navbar-content">
+                <ul>
+                    <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+                    <li><a href="index.html#main-content-3">Referenciák</a></li>
+                    <li><a href="rolunk.html">Rólunk</a></li>
+                    <li><a href="proto-log/index.html">Belépés</a></li>
+                    <li class="theme-toggle-wrapper">
+                        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
 
-        <div id="main-content-3">
-            <div id="main-content-3-top">
-                <h2 id="main-content-3-top-top">a mi küldetésünk</h2>
-                <h1>Szakembereknek lehetőség, otthonoknak megoldás!</h1>
-            </div>
-
-            <div class="card-slider-container wide-card">
-                <div class="card active">
-                    <div class="card-icon">🔍</div>
-                    <h2>A probléma</h2>
+        <main>
+            <div id="main-content-1">
+                <div id="main-content-1-left">
+                    <h2 id="main-content-2-top-top">ismerjen meg minket</h2>
+                    <h1>Mi vagyunk az<br>InnoBiz csapata.</h1>
                     <p>
-                        Ön is észrevette, hogy mostanság <strong>nagyon nehéz megfelelő szakembert találni?</strong>
-                        Tapasztalataink szerint napjainkban egyre nehezebb jó szakembert találni – legyen szó kisebb javításról vagy komplexebb szolgáltatásról.
+                        Egy olyan innovatív vállalkozás, amely az Ön segítségére lehet!
+                        Hiszünk abban, hogy a technológia és a szaktudás összekapcsolása értéket teremt.
                     </p>
                 </div>
             </div>
 
-            <div class="card-slider-container wide-card" style="margin-top: -2rem;">
-                <div class="card active">
-                    <div class="card-icon">🤝</div>
-                    <h2>A megoldásunk</h2>
-                    <p>
-                        Platformunk célja, hogy olyan közvetítő portál legyünk, ahol a <strong>szolgáltatói szektor találkozik a magánszemélyekkel</strong>.
-                        Nálunk mindenki megtalálja a problémája megoldására megfelelő szakembert, a szakemberek pedig új ügyfeleikre lelhetnek.
+            <div id="main-content-3">
+                <div id="main-content-3-top">
+                    <h2 id="main-content-3-top-top">a mi küldetésünk</h2>
+                    <h1>Szakembereknek lehetőség, otthonoknak megoldás!</h1>
+                </div>
+
+                <div class="card-slider-container wide-card" style="margin-bottom: 1rem;">
+                    <div class="card active">
+                        <div class="card-icon">🔍</div>
+                        <h2>A probléma</h2>
+                        <p>
+                            Ön is észrevette, hogy mostanság <strong>nagyon nehéz megfelelő szakembert találni?</strong>
+                            Tapasztalataink szerint napjainkban egyre nehezebb jó szakembert találni – legyen szó kisebb javításról vagy komplexebb szolgáltatásról.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-slider-container wide-card" style="margin-top: 1rem;">
+                    <div class="card active">
+                        <div class="card-icon">🤝</div>
+                        <h2>A megoldásunk</h2>
+                        <p>
+                            Platformunk célja, hogy olyan közvetítő portál legyünk, ahol a <strong>szolgáltatói szektor találkozik a magánszemélyekkel</strong>.
+                            Nálunk mindenki megtalálja a problémája megoldására megfelelő szakembert, a szakemberek pedig új ügyfeleikre lelhetnek.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main-content-2">
+                <div id="main-content-2-top" style="text-align: center;">
+                    <h2 id="main-content-2-top-top">kapcsolat</h2>
+                    <h1>Maradjunk kapcsolatban!</h1>
+                    <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 1rem auto;">
+                        Csatlakozzon hozzánk, iratkozzon fel hírlevelünkre és kövesse közösségi média oldalainkat,
+                        hogy ne maradjon le legújabb híreinkről és akcióinkról.
                     </p>
+
+                    <div style="background: var(--bg-muted); padding: 2rem; border-radius: 2em; border: 1px solid rgba(0,0,0,0.05); margin-top: 2rem;">
+                        <p style="font-weight: bold; margin: 0.5rem 0;">📧 <a href="mailto:innobiz.szakiplaza@gmail.com" style="color: var(--highlight); text-decoration: none;">innobiz.szakiplaza@gmail.com</a></p>
+                        <p style="font-weight: bold; margin: 0.5rem 0;">📞 <a href="tel:+36301234567" style="color: var(--highlight); text-decoration: none;">+36 30 123 4567</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
 
-        <div id="main-content-2">
-            <div id="main-content-2-top" style="text-align: center;">
-                <h2 id="main-content-2-top-top">kapcsolat</h2>
-                <h1>Maradjunk kapcsolatban!</h1>
-                <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 1rem auto;">
-                    Csatlakozzon hozzánk, iratkozzon fel hírlevelünkre és kövesse közösségi média oldalainkat,
-                    hogy ne maradjon le legújabb híreinkről és akcióinkról.
-                </p>
+        <footer id="footer">
+            <div id="footer-top">
+                <img src="source/pngs/InnoBiz_PNG_CLEAN_LOGO.png" alt="Logo">
+                <h1>InnoBiz</h1>
+            </div>
+            <p>
+                Ahol az innováció és a szaktudás találkozik. Minőségi kivitelezés minden szinten.
+            </p>
 
-                <div style="background: var(--bg-muted); padding: 2rem; border-radius: 2em; border: 1px solid rgba(0,0,0,0.05); margin-top: 2rem;">
-                    <p style="font-weight: bold; margin: 0.5rem 0;">📧 <a href="mailto:innobiz.szakiplaza@gmail.com" style="color: var(--highlight); text-decoration: none;">innobiz.szakiplaza@gmail.com</a></p>
-                    <p style="font-weight: bold; margin: 0.5rem 0;">📞 <a href="tel:+36301234567" style="color: var(--highlight); text-decoration: none;">+36 30 123 4567</a></p>
+            <div id="footer-content-1">
+                <h2>cégünk</h2>
+                <ul>
+                    <li><a href="rolunk.html">Rólunk</a></li>
+                    <li><a href="#">Karrier</a></li>
+                </ul>
+            </div>
+
+            <div id="footer-content-2">
+                <h2>kövessen minket</h2>
+                <div id="footer-content-2-links">
+                    <a href="#" aria-label="TikTok">
+                        <svg class="footer-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.465,9.866c-2.139,0-4.122-0.684-5.74-1.846v8.385c0,4.188-3.407,7.594-7.594,7.594c-1.618,0-3.119-0.51-4.352-1.376 c-1.958-1.375-3.242-3.649-3.242-6.218c0-4.188,3.407-7.595,7.595-7.595c0.348,0,0.688,0.029,1.023,0.074v0.977v3.235 c-0.324-0.101-0.666-0.16-1.023-0.16c-1.912,0-3.468,1.556-3.468,3.469c0,1.332,0.756,2.489,1.86,3.07 c0.481,0.253,1.028,0.398,1.609,0.398c1.868,0,3.392-1.486,3.462-3.338L12.598,0h4.126c0,0.358,0.035,0.707,0.097,1.047 c0.291,1.572,1.224,2.921,2.517,3.764c0.9,0.587,1.974,0.93,3.126,0.93V9.866z"/>
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <svg class="footer-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608 c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608 c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07 c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849 c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311 C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014 C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038 c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072 c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12 c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942 C15.668,0.014,15.259,0,12,0z"/>
+                            <path d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162 C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z"/>
+                            <circle cx="18.406" cy="5.594" r="1.44"/>
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="Email">
+                        <svg class="footer-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M510.678,112.275c-2.308-11.626-7.463-22.265-14.662-31.054c-1.518-1.915-3.104-3.63-4.823-5.345 c-12.755-12.818-30.657-20.814-50.214-20.814H71.021c-19.557,0-37.395,7.996-50.21,20.814c-1.715,1.715-3.301,3.43-4.823,5.345 C8.785,90.009,3.63,100.649,1.386,112.275C0.464,116.762,0,121.399,0,126.087V385.92c0,9.968,2.114,19.55,5.884,28.203 c3.497,8.26,8.653,15.734,14.926,22.001c1.59,1.586,3.169,3.044,4.892,4.494c12.286,10.175,28.145,16.32,45.319,16.32h369.958 c17.18,0,33.108-6.145,45.323-16.384c1.718-1.386,3.305-2.844,4.891-4.43c6.27-6.267,11.425-13.741,14.994-22.001v-0.064 c3.769-8.653,5.812-18.171,5.812-28.138V126.087C512,121.399,511.543,116.762,510.678,112.275z M46.509,101.571 c6.345-6.338,14.866-10.175,24.512-10.175h369.958c9.646,0,18.242,3.837,24.512,10.175c1.122,1.129,2.179,2.387,3.112,3.637 L274.696,274.203c-5.348,4.687-11.954,7.002-18.696,7.002c-6.674,0-13.276-2.315-18.695-7.002L43.472,105.136 C44.33,103.886,45.387,102.7,46.509,101.571z M36.334,385.92V142.735L176.658,265.15L36.405,387.435 C36.334,386.971,36.334,386.449,36.334,385.92z M440.979,420.597H71.021c-6.281,0-12.158-1.651-17.174-4.552l147.978-128.959 l13.815,12.018c11.561,10.046,26.028,15.134,40.36,15.134c14.406,0,28.872-5.088,40.432-15.134l13.808-12.018l147.92,128.959 C453.137,418.946,447.26,420.597,440.979,420.597z M475.666,385.92c0,0.529,0,1.051-0.068,1.515L335.346,265.221L475.666,142.8 V385.92z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer id="footer">
-        <div id="footer-top">
-            <img src="source/jpgs/logo_no_text.jpg" alt="Logo">
-            <h1>InnoBiz</h1>
-        </div>
-        <p>
-            Ahol az innováció és a szaktudás találkozik. Minőségi kivitelezés minden szinten.
-        </p>
-
-        <div id="footer-content-1">
-            <h2>cégünk</h2>
-            <ul>
-                <li><a href="rolunk.html">Rólunk</a></li>
-                <li><a href="#">Karrier</a></li>
-            </ul>
-        </div>
-
-        <div id="footer-content-2">
-            <h2>kövessen minket</h2>
-            <div id="footer-content-2-links">
-                <img src="source/svgs/tiktok_logo.svg" alt="TikTok">
-                <img src="source/svgs/instagram_logo.svg" alt="Instagram">
-                <img src="source/svgs/email_icon.svg" alt="Email">
-                <img src="source/svgs/phone_icon.svg" alt="Telefon">
-            </div>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 </body>
 </html>
