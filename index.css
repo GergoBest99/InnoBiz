@@ -40,7 +40,6 @@
     --scrollbar-border-radius: 16px;
 }
 
-/* TODO: Make it lol */
 [data-theme="dark"] {
     /* Colors */
     --bg: #0F1113;
