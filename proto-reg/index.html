@@ -49,13 +49,19 @@
 
                 <div class="form-group">
                     <div class="input-wrapper password-wrapper">
-                        <input type="password" id="password1" name="password" placeholder="" required autocomplete="current-password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9!@#$%^&*]).{8,}">
-                        <label for="password">Jelszó</label>
-                        <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
-                            <span class="eye-icon"></span>
-                        </button>
-                    </div>
-                    <span class="error-message" id="passwordError"></span>
+                    <input type="password" id="password1" name="password" placeholder=" " required 
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9!@#$%^&*]).{8,}">
+                    <label for="password1">Jelszó</label>
+        
+                        <small class="password-hint">
+                             jelszónak legalább 8 karakterből kell állnia, tartalmaznia kell kisbetűt, nagybetűt és egy számot vagy speciális karaktert.
+                        </small>
+
+                    <button type="button" class="password-toggle" id="passwordToggle">
+                         <span class="eye-icon"></span>
+                    </button>
+                </div>
+                 <span class="error-message" id="passwordError1"></span>
                 </div>
 
                 <div class="form-group">

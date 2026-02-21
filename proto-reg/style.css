@@ -713,3 +713,24 @@ body {
         gap: 16px;
     }
 }
+
+.password-hint {
+    display: none;
+    color: var(--danger);
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.4;
+    background: rgba(255, 50, 71, 0.1); 
+    padding: 8px;
+    border-radius: 8px;
+}
+
+
+#password1:focus:invalid:not(:placeholder-shown) ~ .password-hint {
+    display: block;
+}
+
+
+#password1:invalid:not(:placeholder-shown) ~ .password-hint {
+    display: block;
+}

@@ -55,3 +55,21 @@ function setupTheme() {
         themeBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
     });
 }
+
+const pass1 = document.getElementById('password1');
+const pass2 = document.getElementById('password2');
+const errorMsg = document.getElementById('passwordError'); 
+
+function validatePassword() {
+    if (pass1.value !== pass2.value) {
+        pass2.setCustomValidity("A jelszavak nem egyeznek!");
+        errorMsg.textContent = "A két jelszó nem egyezik meg!";
+        errorMsg.classList.add('show');
+    } else {
+        pass2.setCustomValidity('');
+        errorMsg.classList.remove('show');
+    }
+}
+
+pass1.onchange = validatePassword;
+pass2.onkeyup = validatePassword;
