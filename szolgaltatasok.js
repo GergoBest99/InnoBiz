@@ -47,7 +47,7 @@ const kategoriaAdatok = {
                     { id: 'kertepites', name: 'Kertépítés', image: 'source/kepek-re/kertepites.jpg' },
                     { id: 'diszerosanyegkerteszet', name: 'Dísznövénykertész', image: 'source/kepek-re/disznovenykertesz.jpg' }
                 ]},
-                { id: 'viragkoteszet', name: 'Virá gkötészet', image: 'source/kepek-re/viragkotok.jpg', sub: [
+                { id: 'viragkoteszet', name: 'Virágkötészet', image: 'source/kepek-re/viragkotok.jpg', sub: [
                      { id: 'viragbolt', name: 'Virágbolt', image: 'source/kepek-re/viragbolt.jpg' },
                      { id: 'viragkoto', name: 'Virágkötő', image: 'source/kepek-re/viragkoto.jpg' }
                 ]}
