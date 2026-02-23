@@ -202,7 +202,7 @@ function deepSearch(item, searchText) {
 function update() {
     grid.innerHTML = '';
     const currentCategory = navigationStack[navigationStack.length - 1];
-    let itemsToShow = [];
+    let itemsToShow;
     if (currentSearch.trim() !== '') {
         const allMatches = deepSearch(kategoriaAdatok, currentSearch);
         itemsToShow = Array.from(new Map(allMatches.map(m => [m.id, m])).values());
@@ -235,8 +235,7 @@ function createCard(item) {
     div.innerHTML = `
         <div class="card-image">
             <img src="${item.image || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400'}" 
-                 alt="${item.name}"
-                 onerror="this.src='${fallbackImage}'">
+                 alt="${item.name}">
             <div class="overlay"></div>
         </div>
         <div class="card-content">
